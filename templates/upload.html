@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from webthemez.com/demo/biotex-pharma-industry-corporate-html-web-template/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Mar 2020 12:28:46 GMT -->
+<head>
+<meta charset="utf-8">
+<title>TEXT Transform</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="" />
+<meta name="author" content="http://webthemez.com/" />
+<!-- css -->
+<link   href="{{ url_for('static', filename="css/bootstrap.min.css")}}" rel="stylesheet" />
+<link   href="{{ url_for('static', filename="css/fancybox/jquery.fancybox.css")}}"  rel="stylesheet"> 
+<link   href="{{ url_for('static', filename="css/flexslider.css")}}" rel="stylesheet" />
+<link   href="{{ url_for('static', filename="css/style.css")}}" rel="stylesheet" />
+ 
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div id="wrapper">
+	<!-- start header -->
+	<header>
+        <div class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                  <a class="navbar-brand" href="index.html"><img src="static/img/logo.png" alt="logo"/></a>
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+	</header><!-- end header -->
+	<section id="inner-headline">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<h2 class="pageTitle">A.I. transformed TEXT files</h2>
+			</div>
+		</div>
+	</div>
+	</section>
+	<section id="content" style="background-image: url('static/img/back.png');" >
+	
+	<div class="container">
+		<div class="row" >
+			<div class="col-md-12">
+				<div>
+			</div>
+		</div>
+	<div class="row" >
+	
+<script language="javascript" >
+function SelectRedirect(){
+switch(document.getElementById('s1').value)
+{
+case "bipartiteLinearKit.py":
+document.getElementById("demo").innerHTML = "Please fill the following values.<br> 1)Number Below Which To Color Differently <br>2)Space Delimited Data Text File With Column Names <br>3)column1 Name <br>4)column2 Name <br>5)Number Of Parallel Cores OpenMP <br> # # Leave everything else empty.";
+break;
+case "extractPrefix.py": 
+document.getElementById("demo").innerHTML = "Please do the following. <br>1) Upload a txt file <br>2)Fill a Prefix value. <br>Leave everything else empty. <br>[#Note:-the text File should have a column by name node and another by name community separated by space or tab]";
+break;
+case "orderCommunity.py":
+document.getElementById("demo").innerHTML = "Please do the following. <br>1) Upload only a csv file. <br>Leave everything else empty.<br> [#Note:- The columns should be named as node and community separated by tab or space]";
+break;
+default:
+document.getElementById("demo").innerHTML = "Please select one choice.";
+break;
+}}
+</script>
+	
+	
+	
+	
+	
+							
+								
+								     
+												<div align="center">
+																
+																<h2 style="color:white">File selector.</h2>
+															<table border=1 width=500>
+																<form action="/upload" method=post enctype=multipart/form-data>
+																   <tr><th>Select what to Apply:</th>
+                                                                                                                                <td><select name = "program_select" id="s1" onChange="SelectRedirect();" >
+                                                                                                                                    <option value = "" selected disabled hidden >-Select-</option>
+                                                                                                                                    <option value = "bipartiteLinearKit.py">Bipartite Linear Kit </option>
+                                                                                                                                    <option value = "extractPrefix.py">Extract Community Members</option>
+ 																    <option value = "orderCommunity.py">Order Community Members</option>
+                                                                                                                                   </select>
+																	<p id="demo"></p></td></tr>
+																	<tr><th>Number Below Which To Color Differently:</th> <td><input type="text" value="_" name="no_below" ></td></tr>
+																	<tr><th>column1 Name:</th><td><input type="text" value="_" name="clm_1" ></td></tr>
+																	<tr><th>column2 Name:</th><td><input type="text" value="_" name="clm_2" ></td></tr>
+																	<tr><th>Number Of Parallel Cores OpenMP:</th><td><input type="text" value="_" name="p_core" ></td></tr>
+																	<tr><th>Prefix value:</th><td><input type="text" value="_" name="prefix" ></td></tr>
+																	<tr><th>Select file: </th><td>
+																		<input type=file required data-validation-required-message="Please select a file(txt or CSV)." name=f>
+																	</td></tr>
+																<tr><th> </th><td><input type=submit  class="btn btn-success wow fadeInUp " value=Transform><br></br></td></tr>
+																</form>
+     															</table>
+															<form action="/download" method=post enctype=multipart/form-data>
+															<h4 style="color:white">Uploaded files</h4>
+															<ul>
+																{% for UPfile in UPfiles %}
+																<li><label>{{ UPfile }}</label></li>
+																{% endfor %}
+															</ul><br><br>
+															<h4 style="color:white">Processed files</h4>
+															<ul>
+																{% for DWfile in DWfiles %}
+																<li><label><input type="radio" name="activity" value="{{ DWfile }}"/>{{ DWfile }}</label></li>
+																{% endfor %}
+															</ul>
+															<br><br>
+															<input type=submit  class="btn btn-success wow fadeInUp " value=Download><br></br>
+
+															</form>
+
+															</div>
+								
+								
+								
+								
+							
+							
+								
+							</div>
+	</div>
+ 
+	</section>
+	<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="widget">
+					<h5 class="widgetheading">Our Contact</h5>
+					<address>
+					<strong>tantrabyte</strong><br>
+					
+				</div>
+			</div>
+			<div class="col-lg-3">
+				
+			</div>
+			<div class="col-lg-3">
+				
+			</div>
+			<div class="col-lg-3">
+					
+			</div>
+		</div>
+	</div>
+	<div id="sub-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="copyright">
+						<p>
+							<span>&copy; tantrabyte</span><a href="http://webthemez.com/" target="_blank"></a>
+						</p>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<ul class="social-network">
+						<li><a href="#" data-placement="top" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="#" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="#" data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="#" data-placement="top" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+						<li><a href="#" data-placement="top" title="Google plus"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src={{ url_for('static', filename="js/jquery.js") }}></script>
+<script src={{ url_for('static', filename="js/jquery.easing.1.3.js") }}></script>
+<script src={{ url_for('static', filename="js/bootstrap.min.js") }}></script>
+<script src={{ url_for('static', filename="js/jquery.fancybox.pack.js") }}></script>
+<script src={{ url_for('static', filename="js/jquery.fancybox-media.js") }}></script> 
+<script src={{ url_for('static', filename="js/portfolio/jquery.quicksand.js") }}></script>
+<script src={{ url_for('static', filename="js/portfolio/setting.js") }}></script>
+<script src={{ url_for('static', filename="js/jquery.flexslider.js") }}></script>
+<script src={{ url_for('static', filename="js/animate.js") }}></script>
+<script src={{ url_for('static', filename="contact/jqBootstrapValidation.js") }}></script>
+<script src={{ url_for('static', filename="contact/contact_me.js") }}></script>
+<script src={{ url_for('static', filename="js/custom.js") }}></script> 
+</body>
+
+<!-- Mirrored from webthemez.com/demo/biotex-pharma-industry-corporate-html-web-template/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 Mar 2020 12:28:47 GMT -->
+</html>
